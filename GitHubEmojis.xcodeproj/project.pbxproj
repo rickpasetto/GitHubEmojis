@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D02C1C91DD64EE9007EB6D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1C81DD64EE9007EB6D2 /* AppDelegate.swift */; };
+		1D02C1CB1DD64EE9007EB6D2 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1CA1DD64EE9007EB6D2 /* MasterViewController.swift */; };
+		1D02C1CD1DD64EE9007EB6D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1CC1DD64EE9007EB6D2 /* DetailViewController.swift */; };
+		1D02C1D01DD64EEA007EB6D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D02C1CE1DD64EEA007EB6D2 /* Main.storyboard */; };
+		1D02C1D21DD64EEA007EB6D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D02C1D11DD64EEA007EB6D2 /* Assets.xcassets */; };
+		1D02C1D51DD64EEA007EB6D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D02C1D31DD64EEA007EB6D2 /* LaunchScreen.storyboard */; };
+		1D02C1E01DD64EEA007EB6D2 /* GitHubEmojisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1DF1DD64EEA007EB6D2 /* GitHubEmojisTests.swift */; };
+		1D02C1EB1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1EA1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift */; };
+		1D02C1FA1DD65222007EB6D2 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1F91DD65222007EB6D2 /* Emoji.swift */; };
+		1D02C1FC1DD65285007EB6D2 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */; };
+		1D02C1FE1DD658FA007EB6D2 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D02C1FD1DD658FA007EB6D2 /* emojis.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D02C1DC1DD64EEA007EB6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D02C1BD1DD64EE9007EB6D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D02C1C41DD64EE9007EB6D2;
+			remoteInfo = GitHubEmojis;
+		};
+		1D02C1E71DD64EEA007EB6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D02C1BD1DD64EE9007EB6D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D02C1C41DD64EE9007EB6D2;
+			remoteInfo = GitHubEmojis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D02C1C51DD64EE9007EB6D2 /* GitHubEmojis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubEmojis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D02C1C81DD64EE9007EB6D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D02C1CA1DD64EE9007EB6D2 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		1D02C1CC1DD64EE9007EB6D2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1D02C1CF1DD64EEA007EB6D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D02C1D11DD64EEA007EB6D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D02C1D41DD64EEA007EB6D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D02C1D61DD64EEA007EB6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D02C1DB1DD64EEA007EB6D2 /* GitHubEmojisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubEmojisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D02C1DF1DD64EEA007EB6D2 /* GitHubEmojisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubEmojisTests.swift; sourceTree = "<group>"; };
+		1D02C1E11DD64EEA007EB6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D02C1E61DD64EEA007EB6D2 /* GitHubEmojisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubEmojisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D02C1EA1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubEmojisUITests.swift; sourceTree = "<group>"; };
+		1D02C1EC1DD64EEA007EB6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D02C1F91DD65222007EB6D2 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = "GitHubEmojis/Data Model/Emoji.swift"; sourceTree = "<group>"; };
+		1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = "GitHubEmojis/Data Model/Fetcher.swift"; sourceTree = "<group>"; };
+		1D02C1FD1DD658FA007EB6D2 /* emojis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emojis.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D02C1C21DD64EE9007EB6D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D02C1D81DD64EEA007EB6D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D02C1E31DD64EEA007EB6D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D02C1BC1DD64EE9007EB6D2 = {
+			isa = PBXGroup;
+			children = (
+				1D02C1F81DD650AA007EB6D2 /* Data Model */,
+				1D02C1C71DD64EE9007EB6D2 /* GitHubEmojis */,
+				1D02C1DE1DD64EEA007EB6D2 /* GitHubEmojisTests */,
+				1D02C1E91DD64EEA007EB6D2 /* GitHubEmojisUITests */,
+				1D02C1C61DD64EE9007EB6D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D02C1C61DD64EE9007EB6D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D02C1C51DD64EE9007EB6D2 /* GitHubEmojis.app */,
+				1D02C1DB1DD64EEA007EB6D2 /* GitHubEmojisTests.xctest */,
+				1D02C1E61DD64EEA007EB6D2 /* GitHubEmojisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D02C1C71DD64EE9007EB6D2 /* GitHubEmojis */ = {
+			isa = PBXGroup;
+			children = (
+				1D02C1C81DD64EE9007EB6D2 /* AppDelegate.swift */,
+				1D02C1CA1DD64EE9007EB6D2 /* MasterViewController.swift */,
+				1D02C1CC1DD64EE9007EB6D2 /* DetailViewController.swift */,
+				1D02C1CE1DD64EEA007EB6D2 /* Main.storyboard */,
+				1D02C1D11DD64EEA007EB6D2 /* Assets.xcassets */,
+				1D02C1D31DD64EEA007EB6D2 /* LaunchScreen.storyboard */,
+				1D02C1D61DD64EEA007EB6D2 /* Info.plist */,
+			);
+			path = GitHubEmojis;
+			sourceTree = "<group>";
+		};
+		1D02C1DE1DD64EEA007EB6D2 /* GitHubEmojisTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D02C1FD1DD658FA007EB6D2 /* emojis.json */,
+				1D02C1DF1DD64EEA007EB6D2 /* GitHubEmojisTests.swift */,
+				1D02C1E11DD64EEA007EB6D2 /* Info.plist */,
+			);
+			path = GitHubEmojisTests;
+			sourceTree = "<group>";
+		};
+		1D02C1E91DD64EEA007EB6D2 /* GitHubEmojisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D02C1EA1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift */,
+				1D02C1EC1DD64EEA007EB6D2 /* Info.plist */,
+			);
+			path = GitHubEmojisUITests;
+			sourceTree = "<group>";
+		};
+		1D02C1F81DD650AA007EB6D2 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D02C1F91DD65222007EB6D2 /* Emoji.swift */,
+				1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D02C1C41DD64EE9007EB6D2 /* GitHubEmojis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D02C1EF1DD64EEA007EB6D2 /* Build configuration list for PBXNativeTarget "GitHubEmojis" */;
+			buildPhases = (
+				1D02C1C11DD64EE9007EB6D2 /* Sources */,
+				1D02C1C21DD64EE9007EB6D2 /* Frameworks */,
+				1D02C1C31DD64EE9007EB6D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitHubEmojis;
+			productName = GitHubEmojis;
+			productReference = 1D02C1C51DD64EE9007EB6D2 /* GitHubEmojis.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D02C1DA1DD64EEA007EB6D2 /* GitHubEmojisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D02C1F21DD64EEA007EB6D2 /* Build configuration list for PBXNativeTarget "GitHubEmojisTests" */;
+			buildPhases = (
+				1D02C1D71DD64EEA007EB6D2 /* Sources */,
+				1D02C1D81DD64EEA007EB6D2 /* Frameworks */,
+				1D02C1D91DD64EEA007EB6D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D02C1DD1DD64EEA007EB6D2 /* PBXTargetDependency */,
+			);
+			name = GitHubEmojisTests;
+			productName = GitHubEmojisTests;
+			productReference = 1D02C1DB1DD64EEA007EB6D2 /* GitHubEmojisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1D02C1E51DD64EEA007EB6D2 /* GitHubEmojisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D02C1F51DD64EEA007EB6D2 /* Build configuration list for PBXNativeTarget "GitHubEmojisUITests" */;
+			buildPhases = (
+				1D02C1E21DD64EEA007EB6D2 /* Sources */,
+				1D02C1E31DD64EEA007EB6D2 /* Frameworks */,
+				1D02C1E41DD64EEA007EB6D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D02C1E81DD64EEA007EB6D2 /* PBXTargetDependency */,
+			);
+			name = GitHubEmojisUITests;
+			productName = GitHubEmojisUITests;
+			productReference = 1D02C1E61DD64EEA007EB6D2 /* GitHubEmojisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D02C1BD1DD64EE9007EB6D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Rick Pasetto";
+				TargetAttributes = {
+					1D02C1C41DD64EE9007EB6D2 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					1D02C1DA1DD64EEA007EB6D2 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D02C1C41DD64EE9007EB6D2;
+					};
+					1D02C1E51DD64EEA007EB6D2 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D02C1C41DD64EE9007EB6D2;
+					};
+				};
+			};
+			buildConfigurationList = 1D02C1C01DD64EE9007EB6D2 /* Build configuration list for PBXProject "GitHubEmojis" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D02C1BC1DD64EE9007EB6D2;
+			productRefGroup = 1D02C1C61DD64EE9007EB6D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D02C1C41DD64EE9007EB6D2 /* GitHubEmojis */,
+				1D02C1DA1DD64EEA007EB6D2 /* GitHubEmojisTests */,
+				1D02C1E51DD64EEA007EB6D2 /* GitHubEmojisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D02C1C31DD64EE9007EB6D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D02C1D51DD64EEA007EB6D2 /* LaunchScreen.storyboard in Resources */,
+				1D02C1D21DD64EEA007EB6D2 /* Assets.xcassets in Resources */,
+				1D02C1D01DD64EEA007EB6D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D02C1D91DD64EEA007EB6D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D02C1FE1DD658FA007EB6D2 /* emojis.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D02C1E41DD64EEA007EB6D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D02C1C11DD64EE9007EB6D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D02C1CD1DD64EE9007EB6D2 /* DetailViewController.swift in Sources */,
+				1D02C1CB1DD64EE9007EB6D2 /* MasterViewController.swift in Sources */,
+				1D02C1FA1DD65222007EB6D2 /* Emoji.swift in Sources */,
+				1D02C1FC1DD65285007EB6D2 /* Fetcher.swift in Sources */,
+				1D02C1C91DD64EE9007EB6D2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D02C1D71DD64EEA007EB6D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D02C1E01DD64EEA007EB6D2 /* GitHubEmojisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D02C1E21DD64EEA007EB6D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D02C1EB1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D02C1DD1DD64EEA007EB6D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D02C1C41DD64EE9007EB6D2 /* GitHubEmojis */;
+			targetProxy = 1D02C1DC1DD64EEA007EB6D2 /* PBXContainerItemProxy */;
+		};
+		1D02C1E81DD64EEA007EB6D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D02C1C41DD64EE9007EB6D2 /* GitHubEmojis */;
+			targetProxy = 1D02C1E71DD64EEA007EB6D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D02C1CE1DD64EEA007EB6D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D02C1CF1DD64EEA007EB6D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D02C1D31DD64EEA007EB6D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D02C1D41DD64EEA007EB6D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D02C1ED1DD64EEA007EB6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D02C1EE1DD64EEA007EB6D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D02C1F01DD64EEA007EB6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GitHubEmojis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1D02C1F11DD64EEA007EB6D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GitHubEmojis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1D02C1F31DD64EEA007EB6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GitHubEmojisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubEmojis.app/GitHubEmojis";
+			};
+			name = Debug;
+		};
+		1D02C1F41DD64EEA007EB6D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GitHubEmojisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubEmojis.app/GitHubEmojis";
+			};
+			name = Release;
+		};
+		1D02C1F61DD64EEA007EB6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = GitHubEmojisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GitHubEmojis;
+			};
+			name = Debug;
+		};
+		1D02C1F71DD64EEA007EB6D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = GitHubEmojisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GitHubEmojis;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D02C1C01DD64EE9007EB6D2 /* Build configuration list for PBXProject "GitHubEmojis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D02C1ED1DD64EEA007EB6D2 /* Debug */,
+				1D02C1EE1DD64EEA007EB6D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D02C1EF1DD64EEA007EB6D2 /* Build configuration list for PBXNativeTarget "GitHubEmojis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D02C1F01DD64EEA007EB6D2 /* Debug */,
+				1D02C1F11DD64EEA007EB6D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D02C1F21DD64EEA007EB6D2 /* Build configuration list for PBXNativeTarget "GitHubEmojisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D02C1F31DD64EEA007EB6D2 /* Debug */,
+				1D02C1F41DD64EEA007EB6D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D02C1F51DD64EEA007EB6D2 /* Build configuration list for PBXNativeTarget "GitHubEmojisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D02C1F61DD64EEA007EB6D2 /* Debug */,
+				1D02C1F71DD64EEA007EB6D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D02C1BD1DD64EE9007EB6D2 /* Project object */;
+}
