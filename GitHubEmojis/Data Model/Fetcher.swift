@@ -72,11 +72,24 @@ class Fetcher {
 
     private func parseJson(_ data: Data) -> [Emoji]? {
         
-        if let parsedJson = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) {
-            
-            print(parsedJson)
-        }
+        do {
+            if let parsedJson = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: String] {
 
-        return nil
+//                var result: [Emoji] = []
+//                
+//                for (key, value) in parsedJson.sorted(by: { $0 < $1 }) {
+//                    result.append(Emoji(name: key, url: URL(string: value)!))
+//                }
+//                
+//                return result
+                
+                return parsedJson.sorted(by: { $0 < $1 }).map { Emoji(name: $0, url: URL(string: $1)!) }
+                
+            } else {
+                return nil
+            }
+        } catch {
+            return nil
+        }
     }
 }

@@ -12,6 +12,8 @@ import XCTest
 
 class GitHubEmojisTests: XCTestCase {
     
+    let GitHubURL = URL(string: "https://api.github.com/emojis")!
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,22 +24,23 @@ class GitHubEmojisTests: XCTestCase {
         super.tearDown()
     }
     
-
-    func testExample() {
-
+    
+    func testLocal() {
+        
         let bundleUrl = Bundle(for: GitHubEmojisTests.self).bundleURL.appendingPathComponent("emojis.json")
-
+        
         let fetcher = Fetcher(url: bundleUrl)
         
         let expectation = self.expectation(description: "Successful fetch")
         
         fetcher.fetch(handler: (
             onFetchComplete: { emojis in
-                print("SUCCESS: " + emojis.description)
+                XCTAssertGreaterThan(emojis.count, 0)
+                XCTAssertEqual(emojis[0].name, "+1")
                 expectation.fulfill()
-            },
+        },
             onFetchError: { error in
-                print("FAIL: \(error)")
+                XCTFail("\(error)")
                 expectation.fulfill()
         }
         ))
@@ -45,11 +48,33 @@ class GitHubEmojisTests: XCTestCase {
         self.waitForExpectations(timeout: 1.0, handler: nil)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testGithub() {
+        
+        let fetcher = Fetcher(url: GitHubURL)
+        
+        let expectation = self.expectation(description: "Successful fetch")
+        
+        fetcher.fetch(handler: (
+            onFetchComplete: { emojis in
+                XCTAssertGreaterThan(emojis.count, 0)
+                XCTAssertEqual(emojis[0].name, "+1")
+                expectation.fulfill()
+        },
+            onFetchError: { error in
+                XCTFail("\(error)")
+                expectation.fulfill()
         }
+        ))
+        
+        self.waitForExpectations(timeout: 1.0, handler: nil)
     }
+    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }
