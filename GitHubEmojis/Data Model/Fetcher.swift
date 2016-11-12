@@ -10,26 +10,36 @@ import Foundation
 
 enum FetchError {
     
-    /// Failed to fetch the data over HTTP
-    // TODO: store HTTP error?
-    case HttpFetchFailed
-    
-    /// Failed to parse JSON data
-    case ParseFailed
+    /// HTTP Error occurred
+    case HttpError(Int)
+
+    /// Unknown response
+    case UnknownResponse
+
+    /// Some kind of network error
+    case NetworkError(Error)
+
+    /// No data was returned
+    case NoData
 }
 
 typealias ResponseHandler = (
     
-    /// Called on a successful fetch completion, complete with list of Emojis
+    /// Called on a successful fetch completion
     /// Guaranteed to be called on main thread
-    onFetchComplete: (_ emojis: [Emoji]) -> Void,
+    onFetchComplete: (_ data: Data) -> Void,
     
     /// Called on an unsuccessful fetch completion
     /// Guaranteed to be called on main thread
     onFetchError: (_ error: FetchError) -> Void
 )
 
-class Fetcher {
+protocol Fetcher {
+
+    func fetch(_ handler: ResponseHandler)
+}
+
+class URLFetcher: Fetcher {
     
     let url: URL
 
@@ -39,57 +49,40 @@ class Fetcher {
     }
     
     /// Initiate the fetch
-    func fetch(handler: ResponseHandler) {
+    func fetch(_ handler: ResponseHandler) {
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            if let data = data {
-                if error == nil {
-                    
-                    if let emojis = self.parseJson(data) {
-                        
-                        DispatchQueue.main.async {
-                            handler.onFetchComplete(emojis)
-                        }
-                    } else {
-                        DispatchQueue.main.async {
-                            handler.onFetchError(.ParseFailed)
-                        }
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        handler.onFetchError(.HttpFetchFailed)
-                    }
-                }
-            } else {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+
+            if let error = error {
                 DispatchQueue.main.async {
-                    handler.onFetchError(.HttpFetchFailed)
+                    handler.onFetchError(.NetworkError(error))
                 }
+                return
             }
-        }
-        task.resume()
-    }
 
-    private func parseJson(_ data: Data) -> [Emoji]? {
-        
-        do {
-            if let parsedJson = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: String] {
-
-//                var result: [Emoji] = []
-//                
-//                for (key, value) in parsedJson.sorted(by: { $0 < $1 }) {
-//                    result.append(Emoji(name: key, url: URL(string: value)!))
-//                }
-//                
-//                return result
-                
-                return parsedJson.sorted(by: { $0 < $1 }).map { Emoji(name: $0, url: URL(string: $1)!) }
-                
-            } else {
-                return nil
+            guard let response = response as? HTTPURLResponse else {
+                DispatchQueue.main.async {
+                    handler.onFetchError(.UnknownResponse)
+                }
+                return
             }
-        } catch {
-            return nil
-        }
+            if response.statusCode != 200 {
+                DispatchQueue.main.async {
+                    handler.onFetchError(.HttpError(response.statusCode))
+                }
+                return
+            }
+
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    handler.onFetchError(.NoData)
+                }
+                return
+            }
+
+            DispatchQueue.main.async {
+                handler.onFetchComplete(data)
+            }
+        }.resume()
     }
 }

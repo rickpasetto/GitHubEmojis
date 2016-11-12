@@ -18,6 +18,9 @@
 		1D02C1FA1DD65222007EB6D2 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1F91DD65222007EB6D2 /* Emoji.swift */; };
 		1D02C1FC1DD65285007EB6D2 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */; };
 		1D02C1FE1DD658FA007EB6D2 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D02C1FD1DD658FA007EB6D2 /* emojis.json */; };
+		2BD847B51DD67DA700DBA5C6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847B41DD67DA700DBA5C6 /* Model.swift */; };
+		2BD847B71DD67FA400DBA5C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847B61DD67FA400DBA5C6 /* Constants.swift */; };
+		2BD847BA1DD690CC00DBA5C6 /* URLImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847B91DD690CC00DBA5C6 /* URLImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		1D02C1F91DD65222007EB6D2 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = "GitHubEmojis/Data Model/Emoji.swift"; sourceTree = "<group>"; };
 		1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = "GitHubEmojis/Data Model/Fetcher.swift"; sourceTree = "<group>"; };
 		1D02C1FD1DD658FA007EB6D2 /* emojis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emojis.json; sourceTree = "<group>"; };
+		2BD847B41DD67DA700DBA5C6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = GitHubEmojis/Model.swift; sourceTree = "<group>"; };
+		2BD847B61DD67FA400DBA5C6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
+		2BD847B91DD690CC00DBA5C6 /* URLImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		1D02C1BC1DD64EE9007EB6D2 = {
 			isa = PBXGroup;
 			children = (
+				2BD847B81DD6893900DBA5C6 /* Network Fetching */,
 				1D02C1F81DD650AA007EB6D2 /* Data Model */,
 				1D02C1C71DD64EE9007EB6D2 /* GitHubEmojis */,
 				1D02C1DE1DD64EEA007EB6D2 /* GitHubEmojisTests */,
@@ -106,6 +113,7 @@
 		1D02C1C71DD64EE9007EB6D2 /* GitHubEmojis */ = {
 			isa = PBXGroup;
 			children = (
+				2BD847B61DD67FA400DBA5C6 /* Constants.swift */,
 				1D02C1C81DD64EE9007EB6D2 /* AppDelegate.swift */,
 				1D02C1CA1DD64EE9007EB6D2 /* MasterViewController.swift */,
 				1D02C1CC1DD64EE9007EB6D2 /* DetailViewController.swift */,
@@ -140,9 +148,18 @@
 			isa = PBXGroup;
 			children = (
 				1D02C1F91DD65222007EB6D2 /* Emoji.swift */,
-				1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */,
+				2BD847B41DD67DA700DBA5C6 /* Model.swift */,
 			);
 			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		2BD847B81DD6893900DBA5C6 /* Network Fetching */ = {
+			isa = PBXGroup;
+			children = (
+				1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */,
+				2BD847B91DD690CC00DBA5C6 /* URLImageLoader.swift */,
+			);
+			name = "Network Fetching";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +300,11 @@
 				1D02C1CD1DD64EE9007EB6D2 /* DetailViewController.swift in Sources */,
 				1D02C1CB1DD64EE9007EB6D2 /* MasterViewController.swift in Sources */,
 				1D02C1FA1DD65222007EB6D2 /* Emoji.swift in Sources */,
+				2BD847B51DD67DA700DBA5C6 /* Model.swift in Sources */,
+				2BD847B71DD67FA400DBA5C6 /* Constants.swift in Sources */,
 				1D02C1FC1DD65285007EB6D2 /* Fetcher.swift in Sources */,
 				1D02C1C91DD64EE9007EB6D2 /* AppDelegate.swift in Sources */,
+				2BD847BA1DD690CC00DBA5C6 /* URLImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +549,7 @@
 				1D02C1F11DD64EEA007EB6D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D02C1F21DD64EEA007EB6D2 /* Build configuration list for PBXNativeTarget "GitHubEmojisTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +558,7 @@
 				1D02C1F41DD64EEA007EB6D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D02C1F51DD64EEA007EB6D2 /* Build configuration list for PBXNativeTarget "GitHubEmojisUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +567,7 @@
 				1D02C1F71DD64EEA007EB6D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

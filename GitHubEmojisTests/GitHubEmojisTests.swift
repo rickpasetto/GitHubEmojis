@@ -29,11 +29,11 @@ class GitHubEmojisTests: XCTestCase {
         
         let bundleUrl = Bundle(for: GitHubEmojisTests.self).bundleURL.appendingPathComponent("emojis.json")
         
-        let fetcher = Fetcher(url: bundleUrl)
+        let fetcher = URLFetcher(url: bundleUrl)
         
         let expectation = self.expectation(description: "Successful fetch")
         
-        fetcher.fetch(handler: (
+        fetcher.fetch((
             onFetchComplete: { emojis in
                 XCTAssertGreaterThan(emojis.count, 0)
                 XCTAssertEqual(emojis[0].name, "+1")
@@ -51,11 +51,11 @@ class GitHubEmojisTests: XCTestCase {
     
     func testGithub() {
         
-        let fetcher = Fetcher(url: GitHubURL)
+        let fetcher = URLFetcher(url: GitHubURL)
         
         let expectation = self.expectation(description: "Successful fetch")
         
-        fetcher.fetch(handler: (
+        fetcher.fetch((
             onFetchComplete: { emojis in
                 XCTAssertGreaterThan(emojis.count, 0)
                 XCTAssertEqual(emojis[0].name, "+1")
