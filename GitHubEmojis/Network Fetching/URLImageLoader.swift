@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+/// Class that manages loading Images asynchronously from URLs, governed by a key per load.  
+/// Loads for the same key are cancelled automatically so as not to call the same handler twice.
 class URLImageLoader {
 
     var loadsInProgress: [ Int: URLFetcher ] = [:]

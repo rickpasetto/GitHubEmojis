@@ -23,9 +23,8 @@ class GitHubEmojisTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    
-    func testLocal() {
+
+    func testLocalFetch() {
         
         let bundleUrl = Bundle(for: GitHubEmojisTests.self).bundleURL.appendingPathComponent("emojis.json")
         
@@ -34,9 +33,8 @@ class GitHubEmojisTests: XCTestCase {
         let expectation = self.expectation(description: "Successful fetch")
         
         fetcher.fetch((
-            onFetchComplete: { emojis in
-                XCTAssertGreaterThan(emojis.count, 0)
-                XCTAssertEqual(emojis[0].name, "+1")
+            onFetchComplete: { data in
+                XCTAssertGreaterThan(data.count, 0)
                 expectation.fulfill()
         },
             onFetchError: { error in
@@ -47,34 +45,39 @@ class GitHubEmojisTests: XCTestCase {
         
         self.waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
-    
-    func testGithub() {
-        
-        let fetcher = URLFetcher(url: GitHubURL)
-        
-        let expectation = self.expectation(description: "Successful fetch")
-        
-        fetcher.fetch((
-            onFetchComplete: { emojis in
-                XCTAssertGreaterThan(emojis.count, 0)
-                XCTAssertEqual(emojis[0].name, "+1")
-                expectation.fulfill()
+
+    func testModel() {
+
+        var count = -1
+        let testFetcher = TestFetcher()
+        let model = Model(fetcher: testFetcher)
+
+        model.refreshData(
+            dataReady: {
+                count = model.count
         },
-            onFetchError: { error in
-                XCTFail("\(error)")
-                expectation.fulfill()
-        }
-        ))
-        
-        self.waitForExpectations(timeout: 1.0, handler: nil)
+            dataError: { error in
+        })
+
+        let bundleUrl = Bundle(for: GitHubEmojisTests.self).bundleURL.appendingPathComponent("emojis.json")
+        let data = NSData(contentsOf: bundleUrl)
+
+        testFetcher.handler?.onFetchComplete(data as! Data)
+
+        XCTAssertGreaterThan(count, 0)
     }
-    
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measure {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
-    
+
+    // TODO: Write test for URLImageLoader
+}
+
+class TestFetcher: Fetcher {
+
+    var handler: ResponseHandler?
+
+    func fetch(_ handler: ResponseHandler) {
+        self.handler = handler
+    }
+
+    func cancel() {
+    }
 }

@@ -13,9 +13,6 @@ enum FetchError {
     /// HTTP Error occurred
     case HttpError(Int)
 
-    /// Unknown response
-    case UnknownResponse
-
     /// Some kind of network error
     case NetworkError(Error)
 
@@ -36,15 +33,17 @@ typealias ResponseHandler = (
 
 protocol Fetcher {
 
+    /// Initiate an asynchronous fetch.  The response will be called on ResponseHandler
     func fetch(_ handler: ResponseHandler)
 
+    /// Cancel a previously initiated fetch.
     func cancel() 
 }
 
 class URLFetcher: Fetcher {
     
-    let url: URL
-    var sessionTask: URLSessionTask?
+    private let url: URL
+    private var sessionTask: URLSessionTask?
 
     /// Create a fetcher for emojis based on a URL
     init(url: URL) {
@@ -63,13 +62,7 @@ class URLFetcher: Fetcher {
                 return
             }
 
-            guard let response = response as? HTTPURLResponse else {
-                DispatchQueue.main.async {
-                    handler.onFetchError(.UnknownResponse)
-                }
-                return
-            }
-            if response.statusCode != 200 {
+            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
                 DispatchQueue.main.async {
                     handler.onFetchError(.HttpError(response.statusCode))
                 }
