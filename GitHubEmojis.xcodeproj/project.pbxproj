@@ -16,11 +16,11 @@
 		1D02C1E01DD64EEA007EB6D2 /* GitHubEmojisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1DF1DD64EEA007EB6D2 /* GitHubEmojisTests.swift */; };
 		1D02C1EB1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1EA1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift */; };
 		1D02C1FA1DD65222007EB6D2 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1F91DD65222007EB6D2 /* Emoji.swift */; };
-		1D02C1FC1DD65285007EB6D2 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */; };
 		1D02C1FE1DD658FA007EB6D2 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D02C1FD1DD658FA007EB6D2 /* emojis.json */; };
-		2BD847B51DD67DA700DBA5C6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847B41DD67DA700DBA5C6 /* Model.swift */; };
-		2BD847B71DD67FA400DBA5C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847B61DD67FA400DBA5C6 /* Constants.swift */; };
-		2BD847BA1DD690CC00DBA5C6 /* URLImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847B91DD690CC00DBA5C6 /* URLImageLoader.swift */; };
+		2B8394AE1DD6A2A5001BCB8E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8394AD1DD6A2A5001BCB8E /* Model.swift */; };
+		2BD847BD1DD6A20B00DBA5C6 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847BC1DD6A20B00DBA5C6 /* Fetcher.swift */; };
+		2BD847BF1DD6A21300DBA5C6 /* URLImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847BE1DD6A21300DBA5C6 /* URLImageLoader.swift */; };
+		2BD847C11DD6A21D00DBA5C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847C01DD6A21D00DBA5C6 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,11 @@
 		1D02C1EA1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubEmojisUITests.swift; sourceTree = "<group>"; };
 		1D02C1EC1DD64EEA007EB6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D02C1F91DD65222007EB6D2 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = "GitHubEmojis/Data Model/Emoji.swift"; sourceTree = "<group>"; };
-		1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = "GitHubEmojis/Data Model/Fetcher.swift"; sourceTree = "<group>"; };
 		1D02C1FD1DD658FA007EB6D2 /* emojis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emojis.json; sourceTree = "<group>"; };
-		2BD847B41DD67DA700DBA5C6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = GitHubEmojis/Model.swift; sourceTree = "<group>"; };
-		2BD847B61DD67FA400DBA5C6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
-		2BD847B91DD690CC00DBA5C6 /* URLImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageLoader.swift; sourceTree = "<group>"; };
+		2B8394AD1DD6A2A5001BCB8E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = "GitHubEmojis/Data Model/Model.swift"; sourceTree = "<group>"; };
+		2BD847BC1DD6A20B00DBA5C6 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = "GitHubEmojis/Network Fetching/Fetcher.swift"; sourceTree = "<group>"; };
+		2BD847BE1DD6A21300DBA5C6 /* URLImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLImageLoader.swift; path = "GitHubEmojis/Network Fetching/URLImageLoader.swift"; sourceTree = "<group>"; };
+		2BD847C01DD6A21D00DBA5C6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,14 +113,14 @@
 		1D02C1C71DD64EE9007EB6D2 /* GitHubEmojis */ = {
 			isa = PBXGroup;
 			children = (
-				2BD847B61DD67FA400DBA5C6 /* Constants.swift */,
 				1D02C1C81DD64EE9007EB6D2 /* AppDelegate.swift */,
-				1D02C1CA1DD64EE9007EB6D2 /* MasterViewController.swift */,
-				1D02C1CC1DD64EE9007EB6D2 /* DetailViewController.swift */,
-				1D02C1CE1DD64EEA007EB6D2 /* Main.storyboard */,
 				1D02C1D11DD64EEA007EB6D2 /* Assets.xcassets */,
-				1D02C1D31DD64EEA007EB6D2 /* LaunchScreen.storyboard */,
+				2BD847C01DD6A21D00DBA5C6 /* Constants.swift */,
+				1D02C1CC1DD64EE9007EB6D2 /* DetailViewController.swift */,
 				1D02C1D61DD64EEA007EB6D2 /* Info.plist */,
+				1D02C1D31DD64EEA007EB6D2 /* LaunchScreen.storyboard */,
+				1D02C1CE1DD64EEA007EB6D2 /* Main.storyboard */,
+				1D02C1CA1DD64EE9007EB6D2 /* MasterViewController.swift */,
 			);
 			path = GitHubEmojis;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				1D02C1F91DD65222007EB6D2 /* Emoji.swift */,
-				2BD847B41DD67DA700DBA5C6 /* Model.swift */,
+				2B8394AD1DD6A2A5001BCB8E /* Model.swift */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -156,8 +156,8 @@
 		2BD847B81DD6893900DBA5C6 /* Network Fetching */ = {
 			isa = PBXGroup;
 			children = (
-				1D02C1FB1DD65285007EB6D2 /* Fetcher.swift */,
-				2BD847B91DD690CC00DBA5C6 /* URLImageLoader.swift */,
+				2BD847BC1DD6A20B00DBA5C6 /* Fetcher.swift */,
+				2BD847BE1DD6A21300DBA5C6 /* URLImageLoader.swift */,
 			);
 			name = "Network Fetching";
 			sourceTree = "<group>";
@@ -230,6 +230,7 @@
 				TargetAttributes = {
 					1D02C1C41DD64EE9007EB6D2 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = GXD633LQDG;
 						ProvisioningStyle = Automatic;
 					};
 					1D02C1DA1DD64EEA007EB6D2 = {
@@ -297,14 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8394AE1DD6A2A5001BCB8E /* Model.swift in Sources */,
+				2BD847BF1DD6A21300DBA5C6 /* URLImageLoader.swift in Sources */,
 				1D02C1CD1DD64EE9007EB6D2 /* DetailViewController.swift in Sources */,
 				1D02C1CB1DD64EE9007EB6D2 /* MasterViewController.swift in Sources */,
 				1D02C1FA1DD65222007EB6D2 /* Emoji.swift in Sources */,
-				2BD847B51DD67DA700DBA5C6 /* Model.swift in Sources */,
-				2BD847B71DD67FA400DBA5C6 /* Constants.swift in Sources */,
-				1D02C1FC1DD65285007EB6D2 /* Fetcher.swift in Sources */,
 				1D02C1C91DD64EE9007EB6D2 /* AppDelegate.swift in Sources */,
-				2BD847BA1DD690CC00DBA5C6 /* URLImageLoader.swift in Sources */,
+				2BD847BD1DD6A20B00DBA5C6 /* Fetcher.swift in Sources */,
+				2BD847C11DD6A21D00DBA5C6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GXD633LQDG;
 				INFOPLIST_FILE = GitHubEmojis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojis;
@@ -468,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GXD633LQDG;
 				INFOPLIST_FILE = GitHubEmojis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojis;

@@ -23,19 +23,13 @@ class MasterViewController: UITableViewController {
         }
         self.refreshControl?.addTarget(self, action: #selector(MasterViewController.handleRefresh(_:)),
                                        for: UIControlEvents.valueChanged)
-
-        model.refreshData(
-            dataReady: {
-                self.tableView.reloadData()
-            },
-            dataError: { error in
-                self.showAlert(error)
-        })
+        refresh{}
     }
 
     func handleRefresh(_ refreshControl: UIRefreshControl) {
-        self.tableView.reloadData()
-        refreshControl.endRefreshing()
+        refresh {
+            refreshControl.endRefreshing()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -74,17 +68,31 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         let emoji = model[indexPath.row]
-        cell.textLabel!.text = emoji.name
+        cell.textLabel?.text = emoji.name
+        cell.imageView?.image = UIImage(named: "DefaultImage")
         URLImageLoader.load(imageUrl: emoji.url) { image in
-            cell.imageView!.image = image
+            cell.imageView?.image = image
             cell.setNeedsLayout()
         }
-
         return cell
     }
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return false
+    }
+
+    // MARK: - Private functions
+
+    private func refresh(completion: @escaping ()->Void){
+        model.refreshData(
+            dataReady: {
+                self.tableView.reloadData()
+                completion()
+        },
+            dataError: { error in
+                self.showAlert(error)
+                completion()
+        })
     }
 
     private func showAlert(_ message: String) {

@@ -9,3 +9,5 @@
 import Foundation
 
 let GitHubURL = URL(string: "https://api.github.com/emojis")!
+
+let DefaultEmojiWidth = 64
