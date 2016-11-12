@@ -44,6 +44,10 @@ class Model {
         }
     }
 
+    func flush() {
+        emojis.removeAll()
+    }
+
     private func parseJson(_ data: Data) -> [Emoji]? {
 
         do {

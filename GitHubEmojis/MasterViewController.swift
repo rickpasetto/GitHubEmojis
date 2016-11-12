@@ -27,6 +27,9 @@ class MasterViewController: UITableViewController {
     }
 
     func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.model.flush()
+        self.tableView.reloadData()
+
         refresh {
             refreshControl.endRefreshing()
         }

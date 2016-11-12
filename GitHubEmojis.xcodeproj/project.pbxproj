@@ -230,8 +230,7 @@
 				TargetAttributes = {
 					1D02C1C41DD64EE9007EB6D2 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GXD633LQDG;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					1D02C1DA1DD64EEA007EB6D2 = {
 						CreatedOnToolsVersion = 8.1;
@@ -457,7 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GXD633LQDG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GitHubEmojis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojis;
@@ -470,7 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GXD633LQDG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GitHubEmojis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mistermansoftware.rickpasetto.GitHubEmojis;
