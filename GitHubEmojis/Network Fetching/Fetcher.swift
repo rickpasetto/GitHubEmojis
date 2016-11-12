@@ -37,11 +37,14 @@ typealias ResponseHandler = (
 protocol Fetcher {
 
     func fetch(_ handler: ResponseHandler)
+
+    func cancel() 
 }
 
 class URLFetcher: Fetcher {
     
     let url: URL
+    var sessionTask: URLSessionTask?
 
     /// Create a fetcher for emojis based on a URL
     init(url: URL) {
@@ -51,7 +54,7 @@ class URLFetcher: Fetcher {
     /// Initiate the fetch
     func fetch(_ handler: ResponseHandler) {
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
 
             if let error = error {
                 DispatchQueue.main.async {
@@ -83,6 +86,14 @@ class URLFetcher: Fetcher {
             DispatchQueue.main.async {
                 handler.onFetchComplete(data)
             }
-        }.resume()
+        }
+
+        self.sessionTask = task
+        task.resume()
+    }
+
+    /// Cancel the fetch
+    func cancel() {
+        self.sessionTask?.cancel()
     }
 }

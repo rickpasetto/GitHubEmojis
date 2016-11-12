@@ -11,12 +11,15 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
+    var imageLoader: URLImageLoader? = nil
+
     let model = Model(fetcher: URLFetcher(url: GitHubURL))
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
+        self.imageLoader = URLImageLoader()
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -53,6 +56,7 @@ class MasterViewController: UITableViewController {
                 controller.detailItem = model[indexPath.row]
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
+                controller.imageLoader = imageLoader
             }
         }
     }
@@ -74,9 +78,7 @@ class MasterViewController: UITableViewController {
         cell.textLabel?.text = emoji.name
         cell.imageView?.image = UIImage(named: "DefaultImage")
 
-        // TODO: In this simplistic model we do not cancel the image fetch, so it is possible for it to come in
-        // after this cell has been recycled.
-        URLImageLoader.load(imageUrl: emoji.url) { image in
+        imageLoader?.load(imageUrl: emoji.url, forKey: cell.imageView?.hashValue ?? 0) { image in
             cell.imageView?.image = image
             cell.setNeedsLayout()
         }

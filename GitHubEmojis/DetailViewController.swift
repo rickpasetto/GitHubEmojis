@@ -12,11 +12,15 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailImageView: UIImageView!
 
+    var imageLoader: URLImageLoader? = nil
+
     func configureView() {
         // Update the user interface for the detail item.
         if let emoji = self.detailItem {
             self.navigationItem.title = emoji.name
-            URLImageLoader.load(imageUrl: emoji.url) { self.detailImageView?.image = $0 }
+            imageLoader?.load(imageUrl: emoji.url, forKey: self.detailImageView?.hashValue ?? 0 ) {
+                self.detailImageView?.image = $0
+            }
         }
     }
 

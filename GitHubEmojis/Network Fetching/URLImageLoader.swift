@@ -11,15 +11,39 @@ import UIKit
 
 class URLImageLoader {
 
-    static func load(imageUrl: URL, handler: @escaping (_ image: UIImage?)->Void) {
+    var loadsInProgress: [ Int: URLFetcher ] = [:]
+
+    func load(imageUrl: URL, forKey key: Int, handler: @escaping (_ image: UIImage?)->Void) {
+
+        synchronize(self.loadsInProgress) {
+            if let fetcher = self.loadsInProgress[key] {
+                fetcher.cancel()
+                self.loadsInProgress.removeValue(forKey: key)
+            }
+        }
+
         let fetcher = URLFetcher(url: imageUrl)
+        
+        synchronize(self.loadsInProgress) {
+            self.loadsInProgress[key] = fetcher
+        }
 
         fetcher.fetch((
             onFetchComplete: { data in
-                handler(UIImage(data: data))
+                synchronize(self.loadsInProgress) {
+                    if let inProgress = self.loadsInProgress[key], inProgress === fetcher {
+                        handler(UIImage(data: data))
+                        self.loadsInProgress.removeValue(forKey: key)
+                    }
+                }
         },
             onFetchError: { _ in
-                handler(nil)
+                synchronize(self.loadsInProgress) {
+                    if let inProgress = self.loadsInProgress[key], inProgress === fetcher {
+                        handler(nil)
+                        self.loadsInProgress.removeValue(forKey: key)
+                    }
+                }
         }))
     }
 

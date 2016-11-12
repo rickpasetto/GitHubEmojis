@@ -17,6 +17,7 @@
 		1D02C1EB1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1EA1DD64EEA007EB6D2 /* GitHubEmojisUITests.swift */; };
 		1D02C1FA1DD65222007EB6D2 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02C1F91DD65222007EB6D2 /* Emoji.swift */; };
 		1D02C1FE1DD658FA007EB6D2 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D02C1FD1DD658FA007EB6D2 /* emojis.json */; };
+		2B69C5571DD6AEE10092BAFC /* synchronize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B69C5561DD6AEE10092BAFC /* synchronize.swift */; };
 		2B8394AE1DD6A2A5001BCB8E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8394AD1DD6A2A5001BCB8E /* Model.swift */; };
 		2BD847BD1DD6A20B00DBA5C6 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847BC1DD6A20B00DBA5C6 /* Fetcher.swift */; };
 		2BD847BF1DD6A21300DBA5C6 /* URLImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD847BE1DD6A21300DBA5C6 /* URLImageLoader.swift */; };
@@ -57,6 +58,7 @@
 		1D02C1EC1DD64EEA007EB6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D02C1F91DD65222007EB6D2 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = "GitHubEmojis/Data Model/Emoji.swift"; sourceTree = "<group>"; };
 		1D02C1FD1DD658FA007EB6D2 /* emojis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emojis.json; sourceTree = "<group>"; };
+		2B69C5561DD6AEE10092BAFC /* synchronize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = synchronize.swift; sourceTree = "<group>"; };
 		2B8394AD1DD6A2A5001BCB8E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = "GitHubEmojis/Data Model/Model.swift"; sourceTree = "<group>"; };
 		2BD847BC1DD6A20B00DBA5C6 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = "GitHubEmojis/Network Fetching/Fetcher.swift"; sourceTree = "<group>"; };
 		2BD847BE1DD6A21300DBA5C6 /* URLImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLImageLoader.swift; path = "GitHubEmojis/Network Fetching/URLImageLoader.swift"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				1D02C1D31DD64EEA007EB6D2 /* LaunchScreen.storyboard */,
 				1D02C1CE1DD64EEA007EB6D2 /* Main.storyboard */,
 				1D02C1CA1DD64EE9007EB6D2 /* MasterViewController.swift */,
+				2B69C5561DD6AEE10092BAFC /* synchronize.swift */,
 			);
 			path = GitHubEmojis;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				1D02C1CD1DD64EE9007EB6D2 /* DetailViewController.swift in Sources */,
 				1D02C1CB1DD64EE9007EB6D2 /* MasterViewController.swift in Sources */,
 				1D02C1FA1DD65222007EB6D2 /* Emoji.swift in Sources */,
+				2B69C5571DD6AEE10092BAFC /* synchronize.swift in Sources */,
 				1D02C1C91DD64EE9007EB6D2 /* AppDelegate.swift in Sources */,
 				2BD847BD1DD6A20B00DBA5C6 /* Fetcher.swift in Sources */,
 				2BD847C11DD6A21D00DBA5C6 /* Constants.swift in Sources */,
