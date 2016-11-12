@@ -73,6 +73,9 @@ class MasterViewController: UITableViewController {
         let emoji = model[indexPath.row]
         cell.textLabel?.text = emoji.name
         cell.imageView?.image = UIImage(named: "DefaultImage")
+
+        // TODO: In this simplistic model we do not cancel the image fetch, so it is possible for it to come in
+        // after this cell has been recycled.
         URLImageLoader.load(imageUrl: emoji.url) { image in
             cell.imageView?.image = image
             cell.setNeedsLayout()
